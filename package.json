@@ -2,7 +2,7 @@
   "name": "my-dash-center",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "ssh://git@github.com/nasum/my-dash-center.git",
+  "repository": "ssh://git@github.com/nasum/kot-dash.git",
   "author": "nasum <tomato.wonder.life@gmail.com>",
   "license": "MIT",
   "dependencies": {
