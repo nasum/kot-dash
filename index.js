@@ -15,11 +15,15 @@ const dash = dashButton(buttonsMacAddress, '', 5000, 'all')
 const START = 1
 const STOP = 2
 
+console.log('Start KOT DASH')
+
 dash.on("detected", (dashId) => {
   if (dashId === startDashButton) {
     emboss(START)
+    console.log('業務開始')
   } else if (dashId === stopDashButton) {
     emboss(STOP)
+    console.log('業務終了')
   }
 });
 
@@ -33,14 +37,16 @@ function emboss (code) {
 
   const data = {
     "time": moment().format(),
-    "code": code,
+    "code": code
   }
+
+  console.log(JSON.stringify(data))
 
   const options = {
     url: url,
     method: 'POST',
     headers: headers,
-    form: data
+    body: JSON.stringify(data)
   }
 
   request(options, function (error, response, body) {
