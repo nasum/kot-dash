@@ -40,8 +40,6 @@ function emboss (code) {
     "code": code
   }
 
-  console.log(JSON.stringify(data))
-
   const options = {
     url: url,
     method: 'POST',
